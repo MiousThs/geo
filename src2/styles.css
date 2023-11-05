@@ -1,0 +1,626 @@
+/* Reset some basic elements */
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Set box-sizing to border-box for all elements */
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #202225;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    padding: 20px 0;
+    background: #252729;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-title {
+    margin-left: 20px;
+    font-size: 2em;
+    color: #f6cc56;
+    /*color: #fff;*/
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar-links li {
+    padding: 0 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-links a:hover {
+    color: #4db8ff;
+}
+
+.main-content {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero {
+    margin: 50px 0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #4db8ff;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #0099cc;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        padding: 10px;
+    }
+}
+.company-info {
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px;
+    padding: 40px;
+    background-color: #202225;
+    border-radius: 8px;
+}
+
+.info-text h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 1rem;
+    color: #bbbbbb;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-right: 40px;
+}
+
+.info-button {
+    display: inline-block;
+    background-color: #4db8ff;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.info-button:hover {
+    background-color: #0099cc;
+}
+
+/*.info-image {*/
+/*    width: 60%;*/
+/*}*/
+
+/*.info-text {*/
+/*    width: 40%;*/
+/*}*/
+
+.info-image img {
+    width: 100%;
+    object-fit: contain;
+    max-width: 700px;
+    border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .company-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-image {
+        margin-top: 20px;
+    }
+
+    .info-image img {
+        max-width: 80%;
+    }
+}
+
+/* Work Types section styles */
+.work-types {
+    text-align: center;
+    padding: 40px;
+    color: #ccc;
+}
+
+.work-types h2 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: start;
+}
+
+.work-item {
+    background: #252729;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.work-item h3 {
+    color: #f6cc56;
+}
+
+.work-item ul {
+    list-style: none; /* Removes default list style */
+    padding: 0; /* Removes default padding */
+    margin: 20px 0 0; /* Adds some margin to the top */
+    text-align: left; /* Aligns text to the left */
+}
+
+.work-item ul li {
+    position: relative; /* Required for custom bullet positioning */
+    padding-left: 20px; /* Adds space for custom bullets */
+    margin-bottom: 10px; /* Adds space between list items */
+    line-height: 1.5; /* Adjusts the line height for better readability */
+    color: #bbb; /* Lighter text color for list items */
+}
+
+.work-item ul li::before {
+    content: '•'; /* Adds a bullet */
+    color: #f6cc56; /* Bullet color */
+    font-size: 20px; /* Bullet size */
+    position: absolute; /* Positions the bullet absolutely within the li */
+    left: 0; /* Left aligns bullet to the li */
+    top: 0; /* Top aligns bullet to the li */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* ... existing responsive styles ... */
+    .work-item ul {
+        text-align: center; /* Center align the text for mobile if desired */
+    }
+}
+
+.work-item:hover {
+    background-color: #333;
+}
+
+/* Maintain the responsiveness */
+@media (max-width: 768px) {
+    .work-grid {
+        grid-template-columns: 1fr; /* Stack them on top of each other on small screens */
+    }
+}
+
+/* Our Clients Section Styles */
+.our-clients {
+    background: #202225; /* Dark background for the dark theme */
+    color: #ffffff;
+    padding: 60px 0; /* Ample padding for visual space */
+    text-align: center; /* Centering the content */
+}
+
+.our-clients h2 {
+    margin-bottom: 24px; /* Spacing between title and description */
+    color: #fff;
+}
+
+.our-clients p {
+    color: #cccccc;
+    margin-bottom: 48px; /* Spacing between description and company names */
+}
+
+.client-names {
+    display: flex;
+    justify-content: center; /* Center company names horizontally */
+    align-items: center; /* Align company names vertically */
+    flex-wrap: wrap; /* Wrap company names onto the next line on smaller screens */
+    gap: 40px; /* Space between company names */
+}
+
+.client-name {
+    font-size: 1rem; /* Font size for company names */
+    color: #ccc; /* Company name color for better contrast */
+    margin: 0 15px; /* Margin on the sides of each company name */
+    padding: 10px 20px; /* Padding inside each company name box */
+    border: 1px solid #333; /* Subtle border for the name elements */
+    border-radius: 5px; /* Rounded corners for the border */
+    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+.client-name:hover {
+    background-color: #333; /* Darker background on hover */
+    color: #fff; /* Change text color on hover */
+}
+
+/* Responsive adjustments for client names */
+@media (max-width: 768px) {
+    .client-names {
+        flex-direction: column; /* Stack company names vertically on mobile */
+        gap: 20px; /* Less space between stacked names */
+    }
+    .client-name {
+        display: block; /* Make sure each name takes up full width of container */
+        margin: 10px auto; /* Center the names with automatic margins */
+    }
+}
+
+/* Reviews Section Styles */
+.reviews {
+    background-color: #202225;
+    color: #fff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.reviews h2 {
+    color: #f6cc56; /* You can choose a color that fits the design of the page */
+    margin-bottom: 50px;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 15px; /* Adjust the padding as needed */
+}
+
+.review {
+    background: #333; /* Slightly lighter background for the review box */
+    border-left: 4px solid #f6cc56; /* Color accent on the left border */
+    padding: 20px;
+    margin: 0 auto; /* Center the review */
+    text-align: left; /* Align text to the left */
+    max-width: 600px; /* Maximum width of the review boxes */
+    position: relative;
+    font-style: italic;
+}
+
+.review::before {
+    content: "\201C"; /* Open quote */
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 10px;
+    vertical-align: -0.4em; /* Aligns the quote symbol nicely */
+    color: #f6cc56; /* Color of the quote symbol */
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.review footer {
+    text-align: right;
+    margin-top: 20px;
+    font-style: normal; /* Resets the italic style for the footer */
+    font-size: 0.8em;
+}
+
+.review cite {
+    font-weight: bold; /* Adds emphasis to the company name */
+}
+
+/* Responsive adjustments for the reviews section */
+@media (max-width: 768px) {
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+    .review {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+
+/* Contact Section Styles */
+.contact-section {
+    background: #202225; /* Dark background */
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 40px;
+    color: #f6cc56; /* Adjust to match your theme color */
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+    gap: 40px;
+    text-align: start;
+}
+
+.contact-info h3,
+.contact-location h3 {
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.contact-info p,
+.contact-location p {
+    color: #cccccc;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.contact-info li {
+    padding: 8px 0;
+}
+
+.map-outer {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 100%;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+    height: 500px;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .contact-content {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+
+    .map-outer {
+        height: 300px; /* Smaller map height on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section h2 {
+        margin-bottom: 30px;
+    }
+
+    .contact-info, .contact-location {
+        text-align: center;
+    }
+
+    .contact-info ul {
+        text-align: center;
+    }
+}
+
+
+/* Volunteering Section Styles */
+.volunteering-section {
+    color: #fff;
+    background-color: #202225;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.volunteering-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.volunteering-text {
+    flex: 1;
+    min-width: 300px; /* Minimum width of the text box */
+    max-width: 600px; /* Maximum width to maintain readability */
+}
+
+.volunteering-multimedia {
+    flex: 2;
+    text-align: left;
+}
+
+.volunteering-multimedia h3 {
+    margin-top: 0;
+}
+
+.volunteering-photos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.volunteering-photos img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for styled corners */
+}
+
+/* Responsive Video Container */
+video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Optional: for styled corners */
+    margin-bottom: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .volunteering-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .volunteering-multimedia {
+        order: -1; /* Multimedia comes before text on narrow screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .volunteering-content {
+        padding: 0 15px;
+    }
+}
+
+/* Other Side Services Section Styles */
+.other-services-section {
+    background-color: #202225; /* Dark theme background color */
+    color: #ffffff; /* Text color for readability */
+    padding: 60px 0; /* Padding for visual spacing */
+    text-align: center; /* Center aligning the text */
+}
+
+.other-services-section .container {
+    max-width: 1200px; /* Maximum width of the container */
+    margin: auto; /* Centering the container */
+    padding: 0 15px; /* Padding on the sides */
+}
+
+.other-services-section h2 {
+    margin-bottom: 40px; /* Spacing below the section title */
+    color: #f6cc56; /* Accent color for the titles */
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows service items to wrap onto the next line */
+    justify-content: space-around; /* Evenly distributes space between and around service items */
+    gap: 20px; /* Space between the service items */
+}
+
+.service {
+    width: calc(33.333% - 20px); /* Three services per row minus the gap */
+    padding: 20px; /* Padding inside each service box */
+    border: 1px solid #333; /* Border color for style */
+    border-radius: 10px; /* Rounded corners for the service boxes */
+    margin-bottom: 20px; /* Margin at the bottom of each service */
+}
+
+.service h3 {
+    color: #f6cc56; /* Heading color for service name */
+    margin-bottom: 10px; /* Spacing below the service heading */
+}
+
+.service p {
+    font-size: 0.9em; /* Smaller font size for service description */
+    line-height: 1.6; /* Line height for better readability */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .service {
+        width: calc(50% - 20px); /* Two services per row on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .service {
+        width: 100%; /* Full width services on small screens */
+    }
+}
+
+/* Adjusting font sizes and layout for smaller screens */
+@media (max-width: 768px) {
+    .brand-title {
+        margin-left: 10px; /* Reduce margin for smaller screens */
+        font-size: 1.2em; /* Smaller font size for brand title on mobile */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Smaller hero header on mobile */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Smaller paragraph font size on mobile */
+    }
+
+    /* Ensure main content is padded on the sides */
+    .main-content, .company-info, .work-types, .our-clients, .reviews, .contact-section, .volunteering-section, .other-services-section {
+        padding-left: 15px; /* Add padding to the left */
+        padding-right: 15px; /* Add padding to the right */
+    }
+
+    /* Stack elements in company info and reduce image size */
+    .company-info {
+        padding: 20px; /* Less padding on smaller screens */
+    }
+
+    /* Adjust grid layout in work types and reviews */
+    .work-types .work-grid, .reviews .review-grid {
+        grid-template-columns: 1fr; /* Single column grid */
+    }
+
+    /* Contact content stacking and map adjustments */
+    .contact-content, .volunteering-content {
+        flex-direction: column;
+    }
+
+    .map-outer {
+        height: 200px; /* Adjust map height for mobile */
+    }
+}
+
