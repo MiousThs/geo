@@ -59,6 +59,11 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
+.bold-accent {
+    font-weight: bold;
+    color: #f6cc56 !important;
+}
+
 .navbar-links a:hover {
     color: #4db8ff;
 }
@@ -125,7 +130,7 @@ header {
 
 .info-text h2 {
     font-size: 2rem;
-    color: #ffffff;
+    color: #f6cc56;
     margin-bottom: 20px;
 }
 
@@ -139,8 +144,8 @@ header {
 
 .info-button {
     display: inline-block;
-    background-color: #4db8ff;
-    color: #fff;
+    background-color: #f6cc56;
+    color: #202225;
     padding: 10px 25px;
     font-size: 1rem;
     text-decoration: none;
@@ -149,16 +154,20 @@ header {
 }
 
 .info-button:hover {
-    background-color: #0099cc;
+    background-color: #C1A24A;
 }
 
-/*.info-image {*/
-/*    width: 60%;*/
-/*}*/
+.info-text a {
+    cursor: pointer;
+}
 
-/*.info-text {*/
-/*    width: 40%;*/
-/*}*/
+.info-image {
+    width: 60%;
+}
+
+.info-text {
+    width: 40%;
+}
 
 .info-image img {
     width: 100%;
@@ -191,7 +200,7 @@ header {
 }
 
 .work-types h2 {
-    color: #fff;
+    color: #f6cc56;
     margin-bottom: 40px;
 }
 
@@ -210,6 +219,7 @@ header {
 }
 
 .work-item h3 {
+    text-align: center;
     color: #f6cc56;
 }
 
@@ -257,6 +267,60 @@ header {
 }
 
 /* Our Clients Section Styles */
+/*.our-clients {*/
+/*    background: #202225; !* Dark background for the dark theme *!*/
+/*    color: #ffffff;*/
+/*    padding: 60px 0; !* Ample padding for visual space *!*/
+/*    text-align: center; !* Centering the content *!*/
+/*}*/
+
+/*.our-clients h2 {*/
+/*    margin-bottom: 24px; !* Spacing between title and description *!*/
+/*    color: #fff;*/
+/*}*/
+
+/*.our-clients p {*/
+/*    color: #cccccc;*/
+/*    margin-bottom: 48px; !* Spacing between description and company names *!*/
+/*}*/
+
+/*.client-names {*/
+/*    display: flex;*/
+/*    justify-content: center; !* Center company names horizontally *!*/
+/*    align-items: center; !* Align company names vertically *!*/
+/*    flex-wrap: wrap; !* Wrap company names onto the next line on smaller screens *!*/
+/*    gap: 40px; !* Space between company names *!*/
+/*}*/
+
+/*.client-name {*/
+/*    font-size: 1rem; !* Font size for company names *!*/
+/*    color: #ccc; !* Company name color for better contrast *!*/
+/*    margin: 0 15px; !* Margin on the sides of each company name *!*/
+/*    padding: 10px 20px; !* Padding inside each company name box *!*/
+/*    border: 1px solid #333; !* Subtle border for the name elements *!*/
+/*    border-radius: 5px; !* Rounded corners for the border *!*/
+/*    transition: background-color 0.3s, color 0.3s; !* Transition for hover effects *!*/
+/*}*/
+
+/*.client-name:hover {*/
+/*    background-color: #333; !* Darker background on hover *!*/
+/*    color: #fff; !* Change text color on hover *!*/
+/*}*/
+
+/*!* Responsive adjustments for client names *!*/
+/*@media (max-width: 768px) {*/
+/*    .client-names {*/
+/*        flex-direction: column; !* Stack company names vertically on mobile *!*/
+/*        gap: 20px; !* Less space between stacked names *!*/
+/*    }*/
+/*    .client-name {*/
+/*        display: block; !* Make sure each name takes up full width of container *!*/
+/*        margin: 10px auto; !* Center the names with automatic margins *!*/
+/*    }*/
+/*}*/
+
+
+/* Our Clients Section Styles */
 .our-clients {
     background: #202225; /* Dark background for the dark theme */
     color: #ffffff;
@@ -266,48 +330,43 @@ header {
 
 .our-clients h2 {
     margin-bottom: 24px; /* Spacing between title and description */
-    color: #fff;
+    color: #f6cc56;
 }
 
 .our-clients p {
     color: #cccccc;
-    margin-bottom: 48px; /* Spacing between description and company names */
+    margin-bottom: 48px; /* Spacing between description and logos */
 }
 
-.client-names {
+.client-logos {
     display: flex;
-    justify-content: center; /* Center company names horizontally */
-    align-items: center; /* Align company names vertically */
-    flex-wrap: wrap; /* Wrap company names onto the next line on smaller screens */
-    gap: 40px; /* Space between company names */
+    justify-content: center; /* Center logos horizontally */
+    align-items: center; /* Align logos vertically */
+    flex-wrap: wrap; /* Wrap logos onto the next line on smaller screens */
+    gap: 40px; /* Space between logos */
 }
 
-.client-name {
-    font-size: 1rem; /* Font size for company names */
-    color: #ccc; /* Company name color for better contrast */
-    margin: 0 15px; /* Margin on the sides of each company name */
-    padding: 10px 20px; /* Padding inside each company name box */
-    border: 1px solid #333; /* Subtle border for the name elements */
-    border-radius: 5px; /* Rounded corners for the border */
-    transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+.client-logo {
+    max-width: 200px; /* Maximum logo width, adjust as necessary */
+    margin: 0 15px; /* Margin on the sides of each logo */
+    opacity: 0.75; /* Lower opacity for subtlety */
+    transition: opacity 0.3s ease-in-out; /* Transition for hover effect */
 }
 
-.client-name:hover {
-    background-color: #333; /* Darker background on hover */
-    color: #fff; /* Change text color on hover */
+.client-logo:hover {
+    opacity: 1; /* Full opacity on hover */
 }
 
-/* Responsive adjustments for client names */
+/* Responsive adjustments for client logos */
 @media (max-width: 768px) {
-    .client-names {
-        flex-direction: column; /* Stack company names vertically on mobile */
-        gap: 20px; /* Less space between stacked names */
-    }
-    .client-name {
-        display: block; /* Make sure each name takes up full width of container */
-        margin: 10px auto; /* Center the names with automatic margins */
+    .client-logo {
+        max-width: 80px; /* Slightly smaller logos on mobile devices */
+        margin: 10px 15px; /* Adjust margins for mobile devices */
     }
 }
+
+
+
 
 /* Reviews Section Styles */
 .reviews {
@@ -380,8 +439,21 @@ header {
     background: #202225; /* Dark background */
     color: #ffffff;
     padding: 60px 0;
-    text-align: center;
+    /*text-align: center;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
+    gap: 40px;
+    text-align: start;
 }
+
+/*.container-contacts {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    flex-direction: column;*/
+/*    align-items: flex-start;*/
+/*    gap: 40px;*/
+/*    text-align: start;*/
+/*}*/
 
 .contact-section h2 {
     margin-bottom: 40px;
@@ -389,10 +461,17 @@ header {
 }
 
 .contact-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for larger screens */
-    gap: 40px;
-    text-align: start;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(2, 1fr); !* Two columns for larger screens *!*/
+    /*gap: 40px;*/
+    /*text-align: start;*/
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.contact-info {
+    margin-bottom: 45px;
 }
 
 .contact-info h3,
@@ -623,4 +702,50 @@ video {
         height: 200px; /* Adjust map height for mobile */
     }
 }
+
+
+/*.contact-section {*/
+/*    background-color: #333; !* Dark background for the section *!*/
+/*    color: #fff;*/
+/*    padding: 40px 0;*/
+/*    text-align: center;*/
+/*}*/
+
+.contact-form {
+    max-width: 500px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: #f6cc56;
+    color: #202225;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0099cc;
+}
+
 
