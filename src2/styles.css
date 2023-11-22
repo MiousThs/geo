@@ -567,6 +567,11 @@ header {
     text-align: center;
 }
 
+.volunteering-section h2 {
+    margin-bottom: 40px;
+    color: #f6cc56;
+}
+
 .volunteering-content {
     display: flex;
     flex-wrap: wrap;
@@ -576,13 +581,18 @@ header {
 }
 
 .volunteering-text {
-    flex: 1;
+    flex: 5;
     min-width: 300px; /* Minimum width of the text box */
     max-width: 600px; /* Maximum width to maintain readability */
+    padding-right: 60px;
+}
+
+.volunteering-text p {
+    text-align: start;
 }
 
 .volunteering-multimedia {
-    flex: 2;
+    flex: 5;
     text-align: left;
 }
 
